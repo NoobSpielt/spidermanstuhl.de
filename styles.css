@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 100px; 
+    margin: 0; 
+}
+
+footer {
+    color: #000000;
+    padding: 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    font-size: 25px; 
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#movingStuhl {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: moveStuhl 3s infinite alternate;
+}
+
+@keyframes moveStuhl {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-65%, -35%) rotate(90deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+}
